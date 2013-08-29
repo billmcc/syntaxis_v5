@@ -20,6 +20,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+		//include(ds.getModelFolder().path + 'ssjs/myUtils.js');
 		if(WAF.directory.currentUser() != null){
 			//take action for a logged in request
 			$$("main").loadComponent("/components/app.waComponent");
