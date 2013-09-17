@@ -2,11 +2,19 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var button1 = {};	// @button
 	var login1 = {};	// @login
 	var documentEvent = {};	// @document
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	button1.click = function button1_click (event)// @startlock
+	{// @endlock
+		
+		var test = moment().format('dddd');
+		debugger;
+	};// @lock
 
 	login1.logout = function login1_logout (event)// @startlock
 	{// @endlock
@@ -31,6 +39,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("button1", "click", button1.click, "WAF");
 	WAF.addListener("login1", "logout", login1.logout, "WAF");
 	WAF.addListener("login1", "login", login1.login, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
